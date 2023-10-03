@@ -9,28 +9,23 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *slowPtr, *fastPtr = NULL;
+	listint_t *slowPtr, *fastPtr;
 
-	slowPtr = malloc(sizeof(listint_t));
-	fastPtr = malloc(sizeof(listint_t));
+	if (list == NULL)
+		return (0);
 
 	slowPtr = fastPtr = list;
 
-	while (slowPtr != NULL)
+	while (slowPtr != NULL && fastPtr != NULL && fastPtr->next != NULL)
 	{
 		slowPtr = slowPtr->next;
 		fastPtr = fastPtr->next->next;
 
-		if (slowPtr = fastPtr)
+		if ((slowPtr == fastPtr))
 		{
-			free(slowPtr);
-			free(fastPtr);
 			return (1);
 		}
 	}
-
-	free(slowPtr);
-	free(fastPtr);
 
 	return (0);
 }
