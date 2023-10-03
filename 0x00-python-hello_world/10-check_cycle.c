@@ -9,9 +9,9 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *head, *slowPtr, *fastPtr = NULL;
+	listint_t *slowPtr, *fastPtr = NULL;
 
-	head = slowPtr = fastPtr = list;
+	slowPtr = fastPtr = list;
 
 	while (slowPtr != NULL)
 	{
