@@ -11,6 +11,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *slowPtr, *fastPtr = NULL;
 
+	slowPtr = malloc(sizeof(listint_t));
+	fastPtr = malloc(sizeof(listint_t));
+
 	slowPtr = fastPtr = list;
 
 	while (slowPtr != NULL)
@@ -20,9 +23,14 @@ int check_cycle(listint_t *list)
 
 		if (slowPtr = fastPtr)
 		{
+			free(slowPtr);
+			free(fastPtr);
 			return (1);
 		}
 	}
+
+	free(slowPtr);
+	free(fastPtr);
 
 	return (0);
 }
