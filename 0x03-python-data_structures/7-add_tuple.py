@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from itertools import zip_longest
-
 
 def add_tuple(tuple_a=(), tuple_b=()):
     tuple_1 = tuple_a + (0, 0)
