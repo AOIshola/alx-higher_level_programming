@@ -3,7 +3,9 @@ from itertools import zip_longest
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    c = tuple(zip_longest(tuple_a, tuple_b, fillvalue=0))
+    tuple_1 = tuple_a + (0, 0)
+    tuple_2 = tuple_b + (0, 0)
+    c = tuple(zip(tuple_a, tuple_2))
     add_list = []
     for i in range(2):
         add = 0
