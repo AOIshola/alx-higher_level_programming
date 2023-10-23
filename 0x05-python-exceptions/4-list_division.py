@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     results = []
-    zipped = list(zip(my_list_1, my_list_2))
-    for j in zipped:
+    for i in range(list_length):
         try:
-            result = j[0] / j[1]
+            result = my_list_1[i] / my_list_2[i]
             results.append(result)
         except TypeError:
             results.append(0)
