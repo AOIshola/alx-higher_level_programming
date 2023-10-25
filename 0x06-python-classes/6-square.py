@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square"""
 
+
 class Square:
     """Represent any square."""
 
@@ -47,10 +48,9 @@ class Square:
         """Prints the square with the character #"""
         if self.__size == 0:
             print()
-        
+
         for i in range(self.__size):
             [print(" ", end="") for k in range(self.__position[0])]
             for i in range(self.__size):
                 print("#", end="")
             print()
-
