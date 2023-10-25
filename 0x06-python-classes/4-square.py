@@ -13,8 +13,8 @@ class Square:
         self.size = size
 
     @property
-    """Getter and Setter for size attribute"""
     def size(self):
+        """Getter and Setter for size attribute"""
         return (self.__size)
 
     @size.setter
