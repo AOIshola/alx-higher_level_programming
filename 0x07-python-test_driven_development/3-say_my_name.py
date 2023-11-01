@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""The 'Say My Name' Module"""
+
 
 def say_my_name(first_name, last_name=""):
     """
