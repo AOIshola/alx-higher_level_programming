@@ -13,6 +13,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([1.2, 3.2, 0.1, 4.5]), 4.5)
         self.assertEqual(max_integer((2, 3, 4)), 4)
+        self.assertEqual(max_integer([4, 1, 2, 3]), 4)
+        self.assertEqual(max_integer([1, 3, 5, 2, 0]), 5)
+        self.assertEqual(max_integer([3]), 3)
 
     def test_no_arg(self):
         """Tests for correct output for empty arguments"""

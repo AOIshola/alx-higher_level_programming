@@ -35,3 +35,11 @@ TypeError: b must be an integer
 
 >>> add_integer(1.9, 3.1)
 4
+
+>>> add_integer("2.4", "1.2")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2.4, "1.2")
+Traceback (most recent call last):
+TypeError: b must be an integer
