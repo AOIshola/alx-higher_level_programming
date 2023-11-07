@@ -1,0 +1,5 @@
+"""The my_list test module"""
+
+>>> MyList = __import__('1-my_list').MyList
+
+
