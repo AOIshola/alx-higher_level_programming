@@ -25,3 +25,7 @@ TypeError: pascal_triangle() missing 1 required positional argument: 'n'
 >>> pascal_triangle("ab")
 Traceback (most recent call last):
 TypeError: '<=' not supported between instances of 'str' and 'int'
+
+>>> pascal_triangle(2.1)
+Traceback (most recent call last):
+TypeError: 'float' object cannot be interpreted as an integer
