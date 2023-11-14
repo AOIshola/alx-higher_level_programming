@@ -8,10 +8,6 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """Represents a Square Object"""
     def __init__(self, size, x=0, y=0, id=None):
-        self.size = size
-        self.x = x
-        self.y = y
-        self.id = id
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -20,12 +16,12 @@ class Square(Rectangle):
         """
         return ("[" + type(self).__name__ + "] " + "(" + str(self.id) + ") " +
                 str(self.x) + "/" + str(self.y) + " - " +
-                str(self.__size))
+                str(self.width))
 
     @property
     def size(self):
         """Getter for Size attribute"""
-        return (self.__size)
+        return (self.width)
 
     @size.setter
     def size(self, value):
@@ -33,7 +29,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__size = value
+        self.width = value
+        self.heigth = value
 
     def update(self, *args, **kwargs):
         """Update a Square Object"""
