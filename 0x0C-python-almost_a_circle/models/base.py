@@ -58,7 +58,7 @@ class Base:
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         else:
-            dummy = cls(2, 2, 2, 2)
+            dummy = cls(2)
         dummy.update(**dictionary)
         return (dummy)
 
@@ -76,3 +76,34 @@ class Base:
             instance = cls.create(**obj)
             my_list.append(instance)
         return (my_list)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Load JSON from file"""
+        my_list = []
+        filename = cls.__name__ + ".csv"
+        if not os.path.exists(filename):
+            return ([])
+        with open(filename, encoding="utf-8") as f:
+            s = f.read()
+            my_objs = Base.from_json_string(s)
+        for obj in my_objs:
+            instance = cls.create(**obj)
+            my_list.append(instance)
+        return (my_list)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation
+        of list_objs to a file"""
+        my_list = []
+        filename = cls.__name__ + ".csv"
+        with open(filename, encoding="utf-8", mode="w") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                for obj in list_objs:
+                    s = obj.to_dictionary()
+                    my_list.append(s)
+                s = Base.to_json_string(my_list)
+                f.write(s)
