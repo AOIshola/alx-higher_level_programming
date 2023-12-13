@@ -7,7 +7,6 @@ import os
 import turtle
 
 
-
 class Base:
     """Represents the base class"""
     __nb_objects = 0
@@ -114,7 +113,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw shapes using the turtle module"""
+        """Draw shapes using the t.module"""
         for rect in list_rectangles:
             t.begin_fill()
             t.forward(rect.width)
@@ -131,9 +130,9 @@ class Base:
             t.begin_fill()
             t.forward(sqr.width)
             t.left(90)
-            t.fd(sqr.height)
+            t.forward(sqr.height)
             t.left(90)
-            t.fd(sqr.width)
+            t.foward(sqr.width)
             t.left(90)
             t.forward(sqr.height)
             t.end_fill()
