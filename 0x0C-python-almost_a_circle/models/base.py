@@ -4,11 +4,15 @@
 
 import json
 import os
+import turtle
+
 
 
 class Base:
     """Represents the base class"""
     __nb_objects = 0
+    t = turtle.Turtle()
+    t.color("blue", "blue")
 
     def __init__(self, id=None):
         """Initializes all Instances
@@ -107,3 +111,31 @@ class Base:
                     my_list.append(s)
                 s = Base.to_json_string(my_list)
                 f.write(s)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw shapes using the turtle module"""
+        for rect in list_rectangles:
+            t.begin_fill()
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+            t.left(90)
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+            t.end_fill()
+            t.pu()
+
+        for sqr in list_squares:
+            t.begin_fill()
+            t.forward(sqr.width)
+            t.left(90)
+            t.fd(sqr.height)
+            t.left(90)
+            t.fd(sqr.width)
+            t.left(90)
+            t.forward(sqr.height)
+            t.end_fill()
+
+        turtle.done()
