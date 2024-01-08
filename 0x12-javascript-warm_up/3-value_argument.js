@@ -4,7 +4,7 @@ const args = process.argv;
 
 let i = 0;
 for (i = 0; args[i]; i++) {
-  // pass
+  let k = 0;
 }
 
 if (i === 2) {
