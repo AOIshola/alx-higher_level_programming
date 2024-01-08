@@ -1,18 +1,15 @@
 #!/usr/bin/node
 
 const args = process.argv;
-const argc = process.argv.length;
-//const arr = [];
-//let i = 2;
 
-function secondMax(arr) {
+function secondMax (arr) {
   const argc = arr.length;
   let i = 2;
   if (argc === 2 || argc === 3) {
     return (0);
   }
 
-  let newArr = [];
+  const newArr = [];
   while (i < argc) {
     const num = parseInt(arr[i]);
     newArr.push(num);
