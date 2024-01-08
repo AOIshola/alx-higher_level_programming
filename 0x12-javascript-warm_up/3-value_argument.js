@@ -8,10 +8,8 @@ for (i = 0; args[i]; i++) {
   // pass
 }
 
-if (i === 2) {
+if (i <= 2) {
   console.log('No argument');
 } else {
-  for (k = 2; k < i; k++) {
-    console.log(args[k]);
-  }
+  console.log(args[2]);
 }
