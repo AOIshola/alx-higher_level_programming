@@ -5,7 +5,7 @@ const args = process.argv;
 function secondMax (arr) {
   const argc = arr.length;
   let i = 2;
-  if (argc === 2 || argc === 3) {
+  if (argc <= 2 || argc <= 3) {
     return (0);
   }
 
