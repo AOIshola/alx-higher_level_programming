@@ -3,7 +3,7 @@
 const args = process.argv;
 
 let i = 0;
-let k = 0;
+
 for (i = 0; args[i]; i++) {
   // pass
 }
