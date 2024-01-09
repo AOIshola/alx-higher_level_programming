@@ -16,7 +16,7 @@ function secondMax (arr) {
     i++;
   }
 
-  const max2 = newArr.sort();
+  const max2 = newArr.sort((a, b) => a - b);
   return (max2[max2.length - 2]);
 }
 
