@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 module.exports = class Rectangle {
-  constructor(w, h) {
+  constructor (w, h) {
     if (w <= 0 || h <= 0) {
       return;
     }
@@ -9,7 +9,7 @@ module.exports = class Rectangle {
     this.height = h;
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       let line = '';
       for (let k = 0; k < this.width; k++) {
