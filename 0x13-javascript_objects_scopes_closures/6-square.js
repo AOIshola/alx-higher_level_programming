@@ -3,10 +3,6 @@
 const pSquare = require('./5-square');
 
 module.exports = class Square extends pSquare {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     let letter;
     if (!c) {
