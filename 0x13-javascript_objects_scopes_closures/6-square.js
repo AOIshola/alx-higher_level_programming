@@ -5,10 +5,11 @@ const pSquare = require('./5-square');
 module.exports = class Square extends pSquare {
   charPrint (c) {
     let letter;
+
     if (!c) {
       letter = 'X';
     } else {
-      letter = 'C';
+      letter = c;
     }
     for (let i = 0; i < this.height; i++) {
       let line = '';
