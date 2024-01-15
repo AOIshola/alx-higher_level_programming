@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     states = session.query(State).first()
     if not states:
-        pass
+        print("Nothing")
     else:
         print("{}: {}".format(states.id, states.name))
