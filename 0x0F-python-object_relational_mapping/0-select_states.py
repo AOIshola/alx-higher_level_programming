@@ -5,6 +5,7 @@ if __name__ == "__main__":
     import sys
     """Import the MySQLdb module"""
 
+
     db = MySQLdb.connect(
             host="localhost",
             password=sys.argv[1],
