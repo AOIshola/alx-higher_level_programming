@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""List States module"""
 
 if __name__ == "__main__":
     import sys
