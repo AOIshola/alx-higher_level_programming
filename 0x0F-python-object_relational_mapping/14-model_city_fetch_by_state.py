@@ -20,7 +20,7 @@ if __name__ == "__main__":
     results = session.query(City, State).join(
             State,
             City.state_id == State.id,
-            isouter=True).order_by(City.id).all()
+            isouter=True).order_by(City.id)#.all()
     for result in results:
         print("{}: ({}) {}".format(
             result.State.name,
