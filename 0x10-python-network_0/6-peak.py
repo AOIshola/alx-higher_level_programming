@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Finds the peak of an array"""
 
+
 def find_peak(list_of_integers):
     """Finds the peak of an unsorted list of integers"""
     low, high = 0, len(list_of_integers)
