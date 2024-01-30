@@ -8,10 +8,12 @@ import sys
 import urllib.request
 import urllib.parse
 
-val = {"email": sys.argv[2]}
-data = urllib.parse.urlencode(val)
-data = data.encode('ascii')
-req = urllib.request.Request(sys.argv[1], data)
-try: urllib.request.urlopen(req)
-except urllib.error.URLError as e:
-    print(e.reason)
+if __name__ == "__main__":
+    val = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(val)
+    data = data.encode('ascii')
+    req = urllib.request.Request(sys.argv[1], data)
+    try:
+        urllib.request.urlopen(req)
+    except urllib.error.URLError as e:
+        print(e.reason)

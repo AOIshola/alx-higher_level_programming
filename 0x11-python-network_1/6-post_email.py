@@ -6,5 +6,6 @@ displays the body of the response"""
 import requests
 import sys
 
-req = requests.post(sys.argv[1], data={"email": sys.argv[2]})
-print(req.content.decode("utf-8"))
+if __name__ == "__main__":
+    req = requests.post(sys.argv[1], data={"email": sys.argv[2]})
+    print(req.content.decode("utf-8"))
