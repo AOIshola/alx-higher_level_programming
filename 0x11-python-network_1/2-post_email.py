@@ -13,7 +13,5 @@ if __name__ == "__main__":
     data = urllib.parse.urlencode(val)
     data = data.encode('ascii')
     req = urllib.request.Request(sys.argv[1], data)
-    try:
-        urllib.request.urlopen(req)
-    except urllib.error.URLError as e:
-        print(e.reason)
+    with urllib.request.urlopen(req) as res:
+        print(res.read().decode())
