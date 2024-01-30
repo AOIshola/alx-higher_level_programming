@@ -14,8 +14,16 @@ if __name__ == "__main__":
     payload = {"q": q}
 
     req = requests.post("http://0.0.0.0:5000/search_user", data=payload)
-    data = req.json()
-    if len(data) == 0:
-        print("No result")
-    else:
-        print("[{}] {}".format(data["id"], data["name"]))
+
+    try:
+        data = req.json()
+        if not data:
+            print("No result")
+        else:
+            print("[{}] {}".format(data["id"], data["name"]))
+    except ValueError:
+        print("Not a valid JSON")
+#    if len(data) == 0:
+ #       print("No result")
+  #  else:
+   #     print("[{}] {}".format(data["id"], data["name"]))
